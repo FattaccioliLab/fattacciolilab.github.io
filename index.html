@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fattaccioli Lab — Repositories</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:        #f7f6f2;
+    --surface:   #ffffff;
+    --border:    #d8d5cc;
+    --text:      #1a1a1a;
+    --muted:     #6b6860;
+    --accent:    #1a4fd6;
+    --priv:      #b84a00;
+    --pub:       #1a7a3f;
+    --tag-bg:    #eae8e1;
+    --mono:      'IBM Plex Mono', monospace;
+    --sans:      'IBM Plex Sans', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  header {
+    border-bottom: 2px solid var(--text);
+    padding: 2.5rem 3rem 1.5rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  header h1 span {
+    font-weight: 300;
+    color: var(--muted);
+  }
+
+  #meta {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    color: var(--muted);
+    text-align: right;
+    line-height: 1.7;
+  }
+
+  .toolbar {
+    padding: 1.2rem 3rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .toolbar input {
+    font-family: var(--mono);
+    font-size: 0.82rem;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    padding: 0.45rem 0.8rem;
+    width: 260px;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .toolbar input:focus { border-color: var(--accent); }
+
+  .filter-btn {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    padding: 0.42rem 0.9rem;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .filter-btn.active, .filter-btn:hover {
+    background: var(--text);
+    color: var(--bg);
+    border-color: var(--text);
+  }
+
+  #sort-select {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    padding: 0.42rem 0.6rem;
+    margin-left: auto;
+    cursor: pointer;
+    outline: none;
+  }
+
+  main { padding: 2rem 3rem 4rem; }
+
+  #stats {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-bottom: 1.4rem;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+  }
+
+  thead th {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--muted);
+    border-bottom: 2px solid var(--text);
+    padding: 0.6rem 0.8rem;
+    text-align: left;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+  }
+  thead th:hover { color: var(--text); }
+  thead th.sorted { color: var(--accent); }
+
+  tbody tr {
+    border-bottom: 1px solid var(--border);
+    transition: background 0.1s;
+  }
+  tbody tr:hover { background: #efeee8; }
+
+  td {
+    padding: 0.85rem 0.8rem;
+    vertical-align: top;
+    line-height: 1.45;
+  }
+
+  td.name a {
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  td.name a:hover { text-decoration: underline; }
+
+  td.desc {
+    color: var(--muted);
+    font-size: 0.82rem;
+    max-width: 280px;
+  }
+
+  .badge {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    padding: 0.18rem 0.5rem;
+    border: 1px solid;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+  .badge-pub  { color: var(--pub);  border-color: var(--pub);  }
+  .badge-priv { color: var(--priv); border-color: var(--priv); }
+
+  td.mono {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .collabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    max-width: 220px;
+  }
+  .collab-chip {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    background: var(--tag-bg);
+    padding: 0.15rem 0.45rem;
+    border: 1px solid var(--border);
+    white-space: nowrap;
+  }
+  .collab-chip.admin { border-color: var(--accent); color: var(--accent); }
+
+  #loading {
+    text-align: center;
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    color: var(--muted);
+    padding: 4rem;
+    letter-spacing: 0.05em;
+  }
+
+  #error {
+    display: none;
+    font-family: var(--mono);
+    font-size: 0.82rem;
+    color: var(--priv);
+    padding: 2rem 3rem;
+  }
+
+  @media (max-width: 900px) {
+    header, .toolbar, main { padding-left: 1.2rem; padding-right: 1.2rem; }
+    .toolbar input { width: 100%; }
+    table { font-size: 0.8rem; }
+    td.desc { max-width: 160px; }
+    .collabs { max-width: 140px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Fattaccioli Lab <span>/ Repositories</span></h1>
+  <div id="meta">Loading…</div>
+</header>
+
+<div class="toolbar">
+  <input type="text" id="search" placeholder="Filter by name, description, topic…">
+  <button class="filter-btn active" data-vis="all">All</button>
+  <button class="filter-btn" data-vis="public">Public</button>
+  <button class="filter-btn" data-vis="private">Private</button>
+  <select id="sort-select">
+    <option value="updated_at">Sort: last updated</option>
+    <option value="name">Sort: name</option>
+    <option value="forks">Sort: forks</option>
+    <option value="stars">Sort: stars</option>
+  </select>
+</div>
+
+<main>
+  <div id="stats"></div>
+  <div id="loading">Fetching repository data…</div>
+  <div id="error"></div>
+  <table id="repo-table" style="display:none">
+    <thead>
+      <tr>
+        <th data-col="name">Repository</th>
+        <th data-col="desc">Description</th>
+        <th data-col="vis">Visibility</th>
+        <th data-col="forks">Forks</th>
+        <th data-col="stars">Stars</th>
+        <th data-col="updated_at">Last updated</th>
+        <th>Members with access</th>
+      </tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+  </table>
+</main>
+
+<script>
+  let allRepos = [];
+  let sortKey = 'updated_at';
+  let sortDir = -1; // -1 = desc
+  let visFilter = 'all';
+  let searchQ = '';
+  let generatedAt = '';
+
+  async function load() {
+    try {
+      const r = await fetch('repos.json?_=' + Date.now());
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      const data = await r.json();
+      allRepos = data.repos || [];
+      generatedAt = data.generated_at || '';
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('repo-table').style.display = '';
+      render();
+    } catch(e) {
+      document.getElementById('loading').style.display = 'none';
+      const err = document.getElementById('error');
+      err.style.display = 'block';
+      err.textContent = `Could not load repos.json: ${e.message}. Make sure the GitHub Action has run at least once.`;
+    }
+  }
+
+  function fmt(iso) {
+    const d = new Date(iso);
+    const diff = Date.now() - d;
+    const days = Math.floor(diff / 86400000);
+    if (days === 0) return 'today';
+    if (days === 1) return 'yesterday';
+    if (days < 30) return `${days}d ago`;
+    if (days < 365) return `${Math.floor(days/30)}mo ago`;
+    return `${Math.floor(days/365)}y ago`;
+  }
+
+  function render() {
+    const q = searchQ.toLowerCase();
+
+    let repos = allRepos.filter(r => {
+      if (visFilter === 'public'  && r.private)  return false;
+      if (visFilter === 'private' && !r.private) return false;
+      if (!q) return true;
+      return r.name.toLowerCase().includes(q)
+          || (r.description || '').toLowerCase().includes(q)
+          || (r.topics || []).some(t => t.includes(q));
+    });
+
+    repos.sort((a, b) => {
+      let va = a[sortKey], vb = b[sortKey];
+      if (sortKey === 'name') { va = va.toLowerCase(); vb = vb.toLowerCase(); }
+      if (va < vb) return sortDir;
+      if (va > vb) return -sortDir;
+      return 0;
+    });
+
+    const total = allRepos.length;
+    const pub   = allRepos.filter(r => !r.private).length;
+    const priv  = allRepos.filter(r =>  r.private).length;
+    document.getElementById('stats').textContent =
+      `${repos.length} of ${total} repos shown  ·  ${pub} public, ${priv} private  ·  updated ${generatedAt ? new Date(generatedAt).toLocaleString() : '—'}`;
+    document.getElementById('meta').innerHTML =
+      `github.com/fattacciolilab<br>data refreshed nightly via GitHub Actions`;
+
+    const tbody = document.getElementById('tbody');
+    tbody.innerHTML = '';
+
+    repos.forEach(r => {
+      const tr = document.createElement('tr');
+
+      const collabHTML = (r.collaborators || []).map(c => {
+        const cls = (c.role === 'admin' || c.role === 'owner') ? 'collab-chip admin' : 'collab-chip';
+        const label = c.role === 'admin' || c.role === 'owner' ? `${c.login} ★` : c.login;
+        return `<span class="${cls}" title="${c.role}">${label}</span>`;
+      }).join('');
+
+      tr.innerHTML = `
+        <td class="name"><a href="${r.url}" target="_blank" rel="noopener">${r.name}</a>
+          ${r.language ? `<br><span style="font-size:0.68rem;font-family:var(--mono);color:var(--muted)">${r.language}</span>` : ''}
+          ${(r.topics||[]).map(t=>`<span style="display:inline-block;font-size:0.63rem;font-family:var(--mono);background:var(--tag-bg);padding:0.1rem 0.35rem;margin-top:0.2rem;margin-right:0.2rem">${t}</span>`).join('')}
+        </td>
+        <td class="desc">${r.description || '<span style="color:#aaa">—</span>'}</td>
+        <td><span class="badge ${r.private ? 'badge-priv' : 'badge-pub'}">${r.private ? 'private' : 'public'}</span></td>
+        <td class="mono">${r.forks}</td>
+        <td class="mono">${r.stars}</td>
+        <td class="mono" title="${r.updated_at}">${fmt(r.updated_at)}</td>
+        <td><div class="collabs">${collabHTML || '<span style="color:#aaa;font-size:0.72rem">—</span>'}</div></td>
+      `;
+      tbody.appendChild(tr);
+    });
+  }
+
+  // Controls
+  document.getElementById('search').addEventListener('input', e => {
+    searchQ = e.target.value;
+    render();
+  });
+
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      visFilter = btn.dataset.vis;
+      render();
+    });
+  });
+
+  document.getElementById('sort-select').addEventListener('change', e => {
+    sortKey = e.target.value;
+    render();
+  });
+
+  document.querySelectorAll('thead th[data-col]').forEach(th => {
+    th.addEventListener('click', () => {
+      const col = th.dataset.col;
+      const keyMap = { name:'name', forks:'forks', stars:'stars', updated_at:'updated_at' };
+      if (!keyMap[col]) return;
+      if (sortKey === keyMap[col]) { sortDir *= -1; }
+      else { sortKey = keyMap[col]; sortDir = -1; }
+      document.querySelectorAll('thead th').forEach(h => h.classList.remove('sorted'));
+      th.classList.add('sorted');
+      render();
+    });
+  });
+
+  load();
+</script>
+</body>
+</html>
