@@ -1,6 +1,135 @@
 {
-  "generated_at": "2026-05-14T06:15:47.205275Z",
+  "generated_at": "2026-05-15T06:23:49.452283Z",
   "repos": [
+    {
+      "name": "klayout-microfluidic-trapping-array",
+      "description": "",
+      "url": "https://github.com/FattaccioliLab/klayout-microfluidic-trapping-array",
+      "private": false,
+      "forks": 0,
+      "stars": 0,
+      "updated_at": "2026-05-14T17:28:27Z",
+      "language": "",
+      "topics": [],
+      "collaborators": [
+        {
+          "login": "lmontel",
+          "role": "write"
+        },
+        {
+          "login": "fattaccioli",
+          "role": "admin"
+        },
+        {
+          "login": "K-Sakai-INRA",
+          "role": "write"
+        },
+        {
+          "login": "Chaohe-HU",
+          "role": "write"
+        },
+        {
+          "login": "HeloiseUhl",
+          "role": "write"
+        },
+        {
+          "login": "Estelle-Lu",
+          "role": "write"
+        },
+        {
+          "login": "sihemguelai",
+          "role": "write"
+        }
+      ]
+    },
+    {
+      "name": "klayout-microfluidic-components",
+      "description": "Library of reusable KLayout parametric components, generators, and Python macros for microfluidic, mask, and CAD layout design.",
+      "url": "https://github.com/FattaccioliLab/klayout-microfluidic-components",
+      "private": false,
+      "forks": 1,
+      "stars": 2,
+      "updated_at": "2026-05-14T17:26:40Z",
+      "language": "Python",
+      "topics": [
+        "klayout",
+        "mask-design",
+        "microfabrication",
+        "microfluidics",
+        "python"
+      ],
+      "collaborators": [
+        {
+          "login": "lmontel",
+          "role": "write"
+        },
+        {
+          "login": "fattaccioli",
+          "role": "admin"
+        },
+        {
+          "login": "K-Sakai-INRA",
+          "role": "write"
+        },
+        {
+          "login": "Chaohe-HU",
+          "role": "write"
+        },
+        {
+          "login": "HeloiseUhl",
+          "role": "write"
+        },
+        {
+          "login": "Estelle-Lu",
+          "role": "write"
+        },
+        {
+          "login": "sihemguelai",
+          "role": "write"
+        }
+      ]
+    },
+    {
+      "name": "fattacciolilab.github.io",
+      "description": "",
+      "url": "https://github.com/FattaccioliLab/fattacciolilab.github.io",
+      "private": false,
+      "forks": 0,
+      "stars": 0,
+      "updated_at": "2026-05-14T06:15:52Z",
+      "language": "HTML",
+      "topics": [],
+      "collaborators": [
+        {
+          "login": "lmontel",
+          "role": "write"
+        },
+        {
+          "login": "fattaccioli",
+          "role": "admin"
+        },
+        {
+          "login": "K-Sakai-INRA",
+          "role": "write"
+        },
+        {
+          "login": "Chaohe-HU",
+          "role": "write"
+        },
+        {
+          "login": "HeloiseUhl",
+          "role": "write"
+        },
+        {
+          "login": "Estelle-Lu",
+          "role": "write"
+        },
+        {
+          "login": "sihemguelai",
+          "role": "write"
+        }
+      ]
+    },
     {
       "name": "lipid-droplets-characterization",
       "description": "ImageJ / Fiji Plugin to Characterize the Surface Fluorescence and Size Distribution of Microparticles",
@@ -96,47 +225,6 @@
       ]
     },
     {
-      "name": "fattacciolilab.github.io",
-      "description": "",
-      "url": "https://github.com/FattaccioliLab/fattacciolilab.github.io",
-      "private": false,
-      "forks": 0,
-      "stars": 0,
-      "updated_at": "2026-05-13T06:17:31Z",
-      "language": "HTML",
-      "topics": [],
-      "collaborators": [
-        {
-          "login": "lmontel",
-          "role": "write"
-        },
-        {
-          "login": "fattaccioli",
-          "role": "admin"
-        },
-        {
-          "login": "K-Sakai-INRA",
-          "role": "write"
-        },
-        {
-          "login": "Chaohe-HU",
-          "role": "write"
-        },
-        {
-          "login": "HeloiseUhl",
-          "role": "write"
-        },
-        {
-          "login": "Estelle-Lu",
-          "role": "write"
-        },
-        {
-          "login": "sihemguelai",
-          "role": "write"
-        }
-      ]
-    },
-    {
       "name": "lab-protocols",
       "description": "Experimental protocols for the Fattaccioli Lab \u2014 microfluidics, emulsions, surface chemistry, cell biology (IPGG / ENS / Sorbonne)",
       "url": "https://github.com/FattaccioliLab/lab-protocols",
@@ -146,53 +234,6 @@
       "updated_at": "2026-04-21T13:17:15Z",
       "language": "R",
       "topics": [],
-      "collaborators": [
-        {
-          "login": "lmontel",
-          "role": "write"
-        },
-        {
-          "login": "fattaccioli",
-          "role": "admin"
-        },
-        {
-          "login": "K-Sakai-INRA",
-          "role": "write"
-        },
-        {
-          "login": "Chaohe-HU",
-          "role": "write"
-        },
-        {
-          "login": "HeloiseUhl",
-          "role": "write"
-        },
-        {
-          "login": "Estelle-Lu",
-          "role": "write"
-        },
-        {
-          "login": "sihemguelai",
-          "role": "write"
-        }
-      ]
-    },
-    {
-      "name": "klayout-microfluidic-components",
-      "description": "Library of reusable KLayout parametric components, generators, and Python macros for microfluidic, mask, and CAD layout design.",
-      "url": "https://github.com/FattaccioliLab/klayout-microfluidic-components",
-      "private": false,
-      "forks": 1,
-      "stars": 2,
-      "updated_at": "2026-04-17T10:41:56Z",
-      "language": "Python",
-      "topics": [
-        "klayout",
-        "mask-design",
-        "microfabrication",
-        "microfluidics",
-        "python"
-      ],
       "collaborators": [
         {
           "login": "lmontel",
