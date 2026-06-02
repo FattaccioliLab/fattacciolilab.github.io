@@ -1,6 +1,47 @@
 {
-  "generated_at": "2026-06-01T08:25:21.952928Z",
+  "generated_at": "2026-06-02T07:16:44.070500Z",
   "repos": [
+    {
+      "name": "Background-Removal-Plugin---ImageJ",
+      "description": "Background-Removal plugin for ImageJ and ImageJ2 (Fiji)",
+      "url": "https://github.com/FattaccioliLab/Background-Removal-Plugin---ImageJ",
+      "private": false,
+      "forks": 0,
+      "stars": 0,
+      "updated_at": "2026-06-01T09:02:02Z",
+      "language": "Java",
+      "topics": [],
+      "collaborators": [
+        {
+          "login": "lmontel",
+          "role": "write"
+        },
+        {
+          "login": "fattaccioli",
+          "role": "admin"
+        },
+        {
+          "login": "K-Sakai-INRA",
+          "role": "write"
+        },
+        {
+          "login": "Chaohe-HU",
+          "role": "write"
+        },
+        {
+          "login": "HeloiseUhl",
+          "role": "write"
+        },
+        {
+          "login": "Estelle-Lu",
+          "role": "write"
+        },
+        {
+          "login": "sihemguelai",
+          "role": "write"
+        }
+      ]
+    },
     {
       "name": "fattacciolilab.github.io",
       "description": "",
@@ -8,7 +49,7 @@
       "private": false,
       "forks": 0,
       "stars": 0,
-      "updated_at": "2026-05-31T06:50:01Z",
+      "updated_at": "2026-06-01T08:25:37Z",
       "language": "HTML",
       "topics": [],
       "collaborators": [
@@ -837,47 +878,6 @@
       "stars": 0,
       "updated_at": "2026-02-26T04:05:10Z",
       "language": "JavaScript",
-      "topics": [],
-      "collaborators": [
-        {
-          "login": "lmontel",
-          "role": "write"
-        },
-        {
-          "login": "fattaccioli",
-          "role": "admin"
-        },
-        {
-          "login": "K-Sakai-INRA",
-          "role": "write"
-        },
-        {
-          "login": "Chaohe-HU",
-          "role": "write"
-        },
-        {
-          "login": "HeloiseUhl",
-          "role": "write"
-        },
-        {
-          "login": "Estelle-Lu",
-          "role": "write"
-        },
-        {
-          "login": "sihemguelai",
-          "role": "write"
-        }
-      ]
-    },
-    {
-      "name": "Background-Removal-Plugin---ImageJ",
-      "description": "Background-Removal plugin for ImageJ and ImageJ2 (Fiji)",
-      "url": "https://github.com/FattaccioliLab/Background-Removal-Plugin---ImageJ",
-      "private": false,
-      "forks": 0,
-      "stars": 1,
-      "updated_at": "2026-01-14T12:10:50Z",
-      "language": "Java",
       "topics": [],
       "collaborators": [
         {
