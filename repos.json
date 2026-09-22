@@ -1,6 +1,51 @@
 {
-  "generated_at": "2026-09-21T08:21:11.466413Z",
+  "generated_at": "2026-09-22T08:03:22.118862Z",
   "repos": [
+    {
+      "name": "algae-dielectrophoresis",
+      "description": "Supporting code of Alexandre's paper",
+      "url": "https://github.com/FattaccioliLab/algae-dielectrophoresis",
+      "private": true,
+      "forks": 0,
+      "stars": 0,
+      "updated_at": "2026-09-21T16:11:44Z",
+      "language": "Python",
+      "topics": [],
+      "collaborators": [
+        {
+          "login": "lmontel",
+          "role": "write"
+        },
+        {
+          "login": "fattaccioli",
+          "role": "admin"
+        },
+        {
+          "login": "K-Sakai-INRA",
+          "role": "write"
+        },
+        {
+          "login": "Chaohe-HU",
+          "role": "write"
+        },
+        {
+          "login": "AlexCharg",
+          "role": "write"
+        },
+        {
+          "login": "HeloiseUhl",
+          "role": "write"
+        },
+        {
+          "login": "Estelle-Lu",
+          "role": "write"
+        },
+        {
+          "login": "sihemguelai",
+          "role": "write"
+        }
+      ]
+    },
     {
       "name": "fattacciolilab.github.io",
       "description": "",
@@ -8,7 +53,7 @@
       "private": false,
       "forks": 0,
       "stars": 0,
-      "updated_at": "2026-09-20T08:03:20Z",
+      "updated_at": "2026-09-21T08:21:16Z",
       "language": "HTML",
       "topics": [],
       "collaborators": [
@@ -26,6 +71,10 @@
         },
         {
           "login": "Chaohe-HU",
+          "role": "write"
+        },
+        {
+          "login": "AlexCharg",
           "role": "write"
         },
         {
@@ -70,6 +119,10 @@
           "role": "write"
         },
         {
+          "login": "AlexCharg",
+          "role": "write"
+        },
+        {
           "login": "HeloiseUhl",
           "role": "write"
         },
@@ -111,6 +164,10 @@
           "role": "write"
         },
         {
+          "login": "AlexCharg",
+          "role": "write"
+        },
+        {
           "login": "HeloiseUhl",
           "role": "maintain"
         },
@@ -149,6 +206,10 @@
         },
         {
           "login": "Chaohe-HU",
+          "role": "write"
+        },
+        {
+          "login": "AlexCharg",
           "role": "write"
         },
         {
@@ -211,6 +272,10 @@
           "role": "write"
         },
         {
+          "login": "AlexCharg",
+          "role": "write"
+        },
+        {
           "login": "HeloiseUhl",
           "role": "write"
         },
@@ -249,6 +314,10 @@
         },
         {
           "login": "Chaohe-HU",
+          "role": "write"
+        },
+        {
+          "login": "AlexCharg",
           "role": "write"
         },
         {
@@ -293,6 +362,10 @@
           "role": "write"
         },
         {
+          "login": "AlexCharg",
+          "role": "write"
+        },
+        {
           "login": "HeloiseUhl",
           "role": "write"
         },
@@ -331,6 +404,10 @@
         },
         {
           "login": "Chaohe-HU",
+          "role": "write"
+        },
+        {
+          "login": "AlexCharg",
           "role": "write"
         },
         {
@@ -375,6 +452,10 @@
           "role": "write"
         },
         {
+          "login": "AlexCharg",
+          "role": "write"
+        },
+        {
           "login": "HeloiseUhl",
           "role": "write"
         },
@@ -413,6 +494,10 @@
         },
         {
           "login": "Chaohe-HU",
+          "role": "write"
+        },
+        {
+          "login": "AlexCharg",
           "role": "write"
         },
         {
@@ -457,6 +542,10 @@
           "role": "write"
         },
         {
+          "login": "AlexCharg",
+          "role": "write"
+        },
+        {
           "login": "HeloiseUhl",
           "role": "write"
         },
@@ -495,6 +584,10 @@
         },
         {
           "login": "Chaohe-HU",
+          "role": "write"
+        },
+        {
+          "login": "AlexCharg",
           "role": "write"
         },
         {
@@ -539,6 +632,10 @@
           "role": "write"
         },
         {
+          "login": "AlexCharg",
+          "role": "write"
+        },
+        {
           "login": "HeloiseUhl",
           "role": "write"
         },
@@ -580,44 +677,7 @@
           "role": "write"
         },
         {
-          "login": "HeloiseUhl",
-          "role": "write"
-        },
-        {
-          "login": "Estelle-Lu",
-          "role": "write"
-        },
-        {
-          "login": "sihemguelai",
-          "role": "write"
-        }
-      ]
-    },
-    {
-      "name": "algae-dielectrophoresis",
-      "description": "Supporting code of Alexandre's paper",
-      "url": "https://github.com/FattaccioliLab/algae-dielectrophoresis",
-      "private": true,
-      "forks": 0,
-      "stars": 0,
-      "updated_at": "2026-02-26T13:26:47Z",
-      "language": "",
-      "topics": [],
-      "collaborators": [
-        {
-          "login": "lmontel",
-          "role": "write"
-        },
-        {
-          "login": "fattaccioli",
-          "role": "admin"
-        },
-        {
-          "login": "K-Sakai-INRA",
-          "role": "write"
-        },
-        {
-          "login": "Chaohe-HU",
+          "login": "AlexCharg",
           "role": "write"
         },
         {
@@ -663,6 +723,10 @@
         },
         {
           "login": "Chaohe-HU",
+          "role": "write"
+        },
+        {
+          "login": "AlexCharg",
           "role": "write"
         },
         {
@@ -716,6 +780,10 @@
           "role": "write"
         },
         {
+          "login": "AlexCharg",
+          "role": "write"
+        },
+        {
           "login": "HeloiseUhl",
           "role": "write"
         },
@@ -754,6 +822,10 @@
         },
         {
           "login": "Chaohe-HU",
+          "role": "write"
+        },
+        {
+          "login": "AlexCharg",
           "role": "write"
         },
         {
@@ -799,6 +871,10 @@
         },
         {
           "login": "Chaohe-HU",
+          "role": "write"
+        },
+        {
+          "login": "AlexCharg",
           "role": "write"
         },
         {
@@ -856,6 +932,10 @@
           "role": "write"
         },
         {
+          "login": "AlexCharg",
+          "role": "write"
+        },
+        {
           "login": "HeloiseUhl",
           "role": "write"
         },
@@ -894,6 +974,10 @@
         },
         {
           "login": "Chaohe-HU",
+          "role": "write"
+        },
+        {
+          "login": "AlexCharg",
           "role": "write"
         },
         {
@@ -942,6 +1026,10 @@
           "role": "write"
         },
         {
+          "login": "AlexCharg",
+          "role": "write"
+        },
+        {
           "login": "HeloiseUhl",
           "role": "write"
         },
@@ -983,6 +1071,10 @@
           "role": "write"
         },
         {
+          "login": "AlexCharg",
+          "role": "write"
+        },
+        {
           "login": "HeloiseUhl",
           "role": "write"
         },
@@ -1021,6 +1113,10 @@
         },
         {
           "login": "Chaohe-HU",
+          "role": "write"
+        },
+        {
+          "login": "AlexCharg",
           "role": "write"
         },
         {
@@ -1077,6 +1173,10 @@
           "role": "write"
         },
         {
+          "login": "AlexCharg",
+          "role": "write"
+        },
+        {
           "login": "HeloiseUhl",
           "role": "write"
         },
@@ -1123,6 +1223,10 @@
         },
         {
           "login": "Chaohe-HU",
+          "role": "write"
+        },
+        {
+          "login": "AlexCharg",
           "role": "write"
         },
         {
