@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-09-22T08:03:22.118862Z",
+  "generated_at": "2026-09-23T08:05:48.012310Z",
   "repos": [
     {
-      "name": "algae-dielectrophoresis",
-      "description": "Supporting code of Alexandre's paper",
-      "url": "https://github.com/FattaccioliLab/algae-dielectrophoresis",
-      "private": true,
+      "name": "fattacciolilab.github.io",
+      "description": "",
+      "url": "https://github.com/FattaccioliLab/fattacciolilab.github.io",
+      "private": false,
       "forks": 0,
       "stars": 0,
-      "updated_at": "2026-09-21T16:11:44Z",
-      "language": "Python",
+      "updated_at": "2026-09-22T08:03:27Z",
+      "language": "HTML",
       "topics": [],
       "collaborators": [
         {
@@ -47,14 +47,14 @@
       ]
     },
     {
-      "name": "fattacciolilab.github.io",
-      "description": "",
-      "url": "https://github.com/FattaccioliLab/fattacciolilab.github.io",
-      "private": false,
+      "name": "algae-dielectrophoresis",
+      "description": "Supporting code of Alexandre's paper",
+      "url": "https://github.com/FattaccioliLab/algae-dielectrophoresis",
+      "private": true,
       "forks": 0,
       "stars": 0,
-      "updated_at": "2026-09-21T08:21:16Z",
-      "language": "HTML",
+      "updated_at": "2026-09-21T16:11:44Z",
+      "language": "Python",
       "topics": [],
       "collaborators": [
         {
